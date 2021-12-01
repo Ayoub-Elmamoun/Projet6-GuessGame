@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="father">
+
+        <div id="container">
+  
+          <h1>Deviner le nombre!</h1>
+          <p id="text">je pense d'un nombre entre 1 et 100 . Pouvez-vous le deviner?</p>
+          <p id="output"></p>
+          <input type="number" id="guess">
+          <button onclick=submit() id="submitGuess">Validé</button>
+    
+    </div>
+    
+    <script>
+        // variables declaration 
+
+        var guess = document.getElementById("submitGuess")
+        var message = document.getElementById("output")
+        var number = Math.floor(Math.random() * 100)
+        function submit() {
+
+            
+            var input = document.getElementById('guess').value;
+                // if statement
+                //input
+
+            if (input == number){
+
+                message = "Bravo est vrai il est " + number;
+
+            } else if (input > number ) {
+
+                message= "Essayer un petit nombre !"
+
+            } else if (input < number ) {
+                
+                message= "Essayer un grand nombre !"
+            }
+            //output 
+
+            console.log(message)
+        }
+
+
+    </script>
+
+</body>
+</html>
